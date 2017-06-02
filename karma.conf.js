@@ -76,13 +76,13 @@ module.exports = function(config) {
       { pattern: appSrcBase + '**/*.ts', included: false, watched: false },
       { pattern: appBase + '**/*.js.map', included: false, watched: false },
       { pattern: testSrcBase + '**/*.ts', included: false, watched: false },
-      { pattern: testBase + '**/*.js.map', included: false, watched: false}
+      { pattern: testBase + '**/*.js.map', included: false, watched: false }
     ],
 
     // Proxied base paths for loading assets
     proxies: {
       // required for component assets fetched by Angular's compiler
-      "/app/": appAssets
+      '/app/': appAssets
     },
 
     exclude: [],
@@ -95,5 +95,5 @@ module.exports = function(config) {
     autoWatch: true,
     browsers: ['Chrome'],
     singleRun: false
-  })
-}
+  });
+};
