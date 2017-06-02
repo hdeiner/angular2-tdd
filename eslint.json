@@ -4,6 +4,7 @@
         "no-unsafe-finally": "off",
         "no-native-reassign": "off",
         "no-undef": "off",
+        "no-console": "off",
         "complexity": ["off", 11],
         "comma-dangle": "error",
         "require-yield": "error"
