@@ -12,8 +12,8 @@ describe('AppComponent test suite', function () {
   let comp: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
   let de: DebugElement;
-  let navDestination:any;
-  let navLinks:any;
+  let navDestination: any ;
+  let navLinks: any ;
 
   beforeEach(async(() => {
    TestBed.configureTestingModule({

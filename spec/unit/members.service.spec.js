@@ -6,14 +6,14 @@ var testing_2 = require("@angular/http/testing");
 var members_service_stub_js_1 = require("./stub/members.service.stub.js");
 var members_service_1 = require("../../app/services/members.service");
 var mockData = {
-    "id": 2,
-    "name": "Howard Deiner",
-    "phone": "(203) 243-1515",
-    "address": {
-        "street": "28 Lincoln Park Road",
-        "city": "Pequannock",
-        "state": "NJ",
-        "zip": "07440"
+    'id': 2,
+    'name': 'Howard Deiner',
+    'phone': '(203) 243-1515',
+    'address': {
+        'street': '28 Lincoln Park Road',
+        'city': 'Pequannock',
+        'state': 'NJ',
+        'zip': '07440'
     }
 };
 describe('Given service should be defined and response HTTP request', function () {

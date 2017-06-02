@@ -1,12 +1,12 @@
 import {NgModule} from '@angular/core'
-import {BrowserModule} from "@angular/platform-browser";
-import {RouterModule} from "@angular/router";
-import {FormsModule} from "@angular/forms";
-import {HttpModule} from "@angular/http";
+import {BrowserModule} from '@angular/platform-browser';
+import {RouterModule} from '@angular/router';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
 
 
-import {rootRouterConfig} from "./app.routes";
-import {AppComponent} from "./app.component";
+import {rootRouterConfig} from './app.routes';
+import {AppComponent} from './app.component';
 import {NavbarComponent} from './nav/navbar.component';
 import {ProductsComponent} from './view/products.component';
 import {OrdersComponent} from './view/orders.component';

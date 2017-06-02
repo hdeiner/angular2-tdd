@@ -4,14 +4,14 @@ var MembersServiceSpy = (function () {
     function MembersServiceSpy() {
         var _this = this;
         this.members = {
-            "id": 2,
-            "name": "Howard Deiner",
-            "phone": "(203) 243-1515",
-            "address": {
-                "street": "28 Lincoln Park Road",
-                "city": "Pequannock",
-                "state": "NJ",
-                "zip": "07440"
+            'id': 2,
+            'name': 'Howard Deiner',
+            'phone': '(203) 243-1515',
+            'address': {
+                'street': '28 Lincoln Park Road',
+                'city': 'Pequannock',
+                'state': 'NJ',
+                'zip': '07440'
             }
         };
         this.getData = jasmine.createSpy('getData').and.callFake(function () { return Promise

@@ -5,7 +5,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class MembersService {
-  constructor(private http:Http) {
+  constructor(private http: Http ) {
 
   }
 
@@ -19,7 +19,7 @@ export class MembersService {
       .then(response => response.json());
   }
 
-  searchQuery(q:string) {
+  searchQuery(q: string ) {
     if (!q || q === '*') {
       q = '';
     } else {
@@ -27,7 +27,7 @@ export class MembersService {
     }
     return this.getData()
       .then(data => {
-      let results:any = [];
+      let results: any = [];
       data.map(item => {
         if (JSON.stringify(item).toLowerCase().includes(q)) {
           results.push(item);
@@ -37,7 +37,7 @@ export class MembersService {
     });
   }
 
-  getPerson(id:number) {
+  getPerson(id: number ) {
     return this.getData()
       .then(data => data.find(member => member.id === id));
   }
@@ -45,12 +45,12 @@ export class MembersService {
 }
 
 export class Person {
-  id:number;
-  name:string;
-  phone:string;
-  address:Address;
+  id: number ;
+  name: string ;
+  phone: string ;
+  address: Address ;
 
-  constructor(obj?:any) {
+  constructor(obj?: any ) {
     this.id = obj && Number(obj.id) || null;
     this.name = obj && obj.name || null;
     this.phone = obj && obj.phone || null;
@@ -59,12 +59,12 @@ export class Person {
 }
 
 export class Address {
-  street:string;
-  city:string;
-  state:string;
-  zip:string;
+  street: string ;
+  city: string ;
+  state: string ;
+  zip: string ;
 
-  constructor(obj?:any) {
+  constructor(obj?: any ) {
     this.street = obj && obj.street || null;
     this.city = obj && obj.city || null;
     this.state = obj && obj.state || null;

@@ -7,14 +7,14 @@ import { MembersServiceSpy } from './stub/members.service.stub.js';
 import { MembersService } from '../../app/services/members.service';
 
 const mockData = {
-  "id": 2,
-  "name": "Howard Deiner",
-  "phone": "(203) 243-1515",
-  "address": {
-    "street": "28 Lincoln Park Road",
-    "city": "Pequannock",
-    "state": "NJ",
-    "zip": "07440"
+  'id': 2,
+  'name': 'Howard Deiner',
+  'phone': '(203) 243-1515',
+  'address': {
+    'street': '28 Lincoln Park Road',
+    'city': 'Pequannock',
+    'state': 'NJ',
+    'zip': '07440'
   }
 };
 
