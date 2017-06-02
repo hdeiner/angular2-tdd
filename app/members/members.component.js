@@ -24,9 +24,11 @@ var MembersComponent = (function () {
     MembersComponent.prototype.onSearch = function (searchResult) {
         this.memberList = searchResult;
     };
+    ;
     MembersComponent.prototype.viewDetails = function (id) {
         this.router.navigate(['/person', id]);
     };
+    ;
     MembersComponent.prototype.getMembers = function () {
         var _this = this;
         this.membersService.getData()

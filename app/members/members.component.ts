@@ -11,9 +11,8 @@ import { MembersService, Person } from '../services/members.service';
 })
 export class MembersComponent implements OnInit {
   memberList: Array<Person> = [];
-  query: string;
 
-  constructor(public membersService: MembersService, private router:Router) {
+  constructor(public membersService: MembersService, private router: Router ) {
 
   }
 
@@ -23,11 +22,11 @@ export class MembersComponent implements OnInit {
 
   onSearch(searchResult) {
     this.memberList = searchResult;
-  }
+  };
 
-  viewDetails(id:number) {
+  viewDetails(id: number ) {
     this.router.navigate(['/person', id]);
-  }
+  };
 
   getMembers() {
     this.membersService.getData()
@@ -35,7 +34,7 @@ export class MembersComponent implements OnInit {
       data.map(item => {
         this.memberList.push(item);
       });
-    })
+    });
     return this.memberList;
   }
 
