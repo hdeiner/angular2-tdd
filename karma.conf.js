@@ -12,10 +12,11 @@ module.exports = function(config) {
     frameworks: ['jasmine'],
 
     plugins: [
-      require('karma-jasmine'),
-      require('karma-chrome-launcher'),
-      require('karma-phantomjs-launcher'),
-      require('karma-jasmine-html-reporter') // click "Debug" in browser to see it
+        require('karma-jasmine'),
+        require('karma-chrome-launcher'),
+        require('karma-firefox-launcher'),
+        require('karma-phantomjs-launcher'),
+        require('karma-jasmine-html-reporter') // click "Debug" in browser to see it
     ],
 
     client: {
@@ -93,7 +94,7 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['Chrome', 'Firefox'],
     singleRun: true
   });
 };

@@ -7,7 +7,7 @@ describe('Given the members search feature', () => {
   beforeEach(() => {
     browser.get('');
     element(by.linkText('Members')).click();
-    searchButton = element(by.css('form button'));
+    searchButton = element(by.buttonText('Search'));
     searchBox = element(by.css('form input'));
   });
 
@@ -22,10 +22,12 @@ describe('Given the members search feature', () => {
   });
 
   it('After searching for "Howard", there should be one item in search results', () => {
-    searchBox.sendKeys('Howard');
-    searchButton.click().then(() => {
+      console.log('about to send keys!!!');
+      searchBox.sendKeys('Howard')
+      console.log('sent keys!!!');
+      searchButton.click()
+      console.log('clicked!!!');
       searchResult = element.all(by.css('#searchList tbody tr'));
       expect(searchResult.count()).toBe(1);
     });
-  });
 });

@@ -16,13 +16,20 @@ var _ = require('lodash');
 
 
 exports.config = {
-  directConnect: true,
+// The address of a running selenium server.You can add your remote address here
+    seleniumAddress:
+        (process.env.SELENIUM_URL || 'http://localhost:4444/wd/hub'),
 
-  // Capabilities to be passed to the webdriver instance.
-  capabilities: {
-    'browserName': 'chrome'
-  },
-
+    // Capabilities to be passed to the webdriver instance.
+    multiCapabilities : [
+        {
+            'browserName': 'chrome'
+        },
+//        {
+//            'browserName': 'firefox',
+//            'marionette': 'true'
+        }
+        ],
   // Framework to use. Jasmine is recommended.
   framework: 'jasmine',
 
@@ -34,7 +41,7 @@ exports.config = {
   useAllAngular2AppRoots: true,
 
   // Base URL for application server
-  baseUrl: 'http://localhost:3000',
+    baseUrl: 'http://localhost:3000',
 
   // doesn't seem to work.
   // resultJsonOutputFile: "foo.json",
@@ -57,7 +64,6 @@ exports.config = {
   },
 
   jasmineNodeOpts: {
-    // defaultTimeoutInterval: 60000,
     defaultTimeoutInterval: 60000,
     showTiming: true,
     print: function() {}
@@ -171,11 +177,11 @@ function Reporter(options) {
   var _pad;
   function log(str, indent) {
     _pad = _pad || '';
-    if (indent == -1) {
+    if (indent === -1) {
       _pad = _pad.substr(2);
     }
     console.log(_pad + str);
-    if (indent == 1) {
+    if (indent === 1) {
       _pad = _pad + '  ';
     }
   }

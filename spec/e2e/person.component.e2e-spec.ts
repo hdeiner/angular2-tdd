@@ -18,27 +18,27 @@ describe('Given the members detail view that comes when you search for "Howard" 
   });
 
   it('The name should display as "Howard Deiner"', () => {
-    const name = element(by.xpath('//*[@id="personDetails"]/tbody/tr[1]/td[2]'));
+    const name = element(by.id('personName'));
     expect<any>(name.getText()).toEqual('Howard Deiner');
   });
   it('The phone should display as "(203) 243-1515"', () => {
-    const name = element(by.xpath('//*[@id="personDetails"]/tbody/tr[2]/td[2]'));
+    const name = element(by.id('personPhone'));
     expect<any>(name.getText()).toEqual('(203) 243-1515');
   });
   it('The street should display as "28 Lincoln Park Road"', () => {
-    const name = element(by.xpath('//*[@id="personDetails"]/tbody/tr[3]/td[2]'));
+    const name = element(by.id('personAddressStreet'));
     expect<any>(name.getText()).toEqual('28 Lincoln Park Road');
   });
   it('The city should display as "Pequannock"', () => {
-    const name = element(by.xpath('//*[@id="personDetails"]/tbody/tr[4]/td[2]'));
+    const name = element(by.id('personAddressCity'));
     expect<any>(name.getText()).toEqual('Pequannock');
   });
   it('The state should display as "NJ"', () => {
-    const name = element(by.xpath('//*[@id="personDetails"]/tbody/tr[5]/td[2]'));
+    const name = element(by.id('personAddressState'));
     expect<any>(name.getText()).toEqual('NJ');
   });
   it('The zip should display as "07440"', () => {
-    const name = element(by.xpath('//*[@id="personDetails"]/tbody/tr[6]/td[2]'))
+    const name = element(by.id('personAddressZip'));
     expect<any>(name.getText()).toEqual('07440');
   });
 });
