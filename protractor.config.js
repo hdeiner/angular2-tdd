@@ -17,20 +17,13 @@ var _ = require('lodash');
 
 exports.config = {
 // The address of a running selenium server.You can add your remote address here
-    seleniumAddress:
-        (process.env.SELENIUM_URL || 'http://localhost:4444/wd/hub'),
+    seleniumAddress: (process.env.SELENIUM_URL || 'http://localhost:4444/wd/hub'),
 
     // Capabilities to be passed to the webdriver instance.
-    multiCapabilities : [
-        {
-            'browserName': 'chrome'
-        },
-//        {
-//            'browserName': 'firefox',
-//            'marionette': 'true'
-        }
-        ],
-  // Framework to use. Jasmine is recommended.
+    multiCapabilities: [{
+        'browserName': 'chrome'
+    }],
+    // Framework to use. Jasmine is recommended.
   framework: 'jasmine',
 
   // Spec patterns are relative to this config file
