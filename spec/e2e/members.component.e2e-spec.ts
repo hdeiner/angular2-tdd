@@ -22,11 +22,8 @@ describe('Given the members search feature', () => {
   });
 
   it('After searching for "Howard", there should be one item in search results', () => {
-      console.log('about to send keys!!!');
       searchBox.sendKeys('Howard')
-      console.log('sent keys!!!');
       searchButton.click()
-      console.log('clicked!!!');
       searchResult = element.all(by.css('#searchList tbody tr'));
       expect(searchResult.count()).toBe(1);
     });

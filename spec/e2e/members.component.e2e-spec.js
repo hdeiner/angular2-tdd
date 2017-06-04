@@ -18,11 +18,8 @@ describe('Given the members search feature', function () {
         expect(searchResult.count()).toBe(5);
     });
     it('After searching for "Howard", there should be one item in search results', function () {
-        console.log('about to send keys!!!');
         searchBox.sendKeys('Howard');
-        console.log('sent keys!!!');
         searchButton.click();
-        console.log('clicked!!!');
         searchResult = protractor_1.element.all(protractor_1.by.css('#searchList tbody tr'));
         expect(searchResult.count()).toBe(1);
     });
