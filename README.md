@@ -90,7 +90,7 @@ Shut it down manually with `Ctrl-C`.
 
 This is where the rubber hits the road.  Writing new tests before new functionality
 and running those tests as part of a TDD pattern are all well and good.  But the
-first time that your customer compains of a bug, and you respond with "It works
+first time that your customer complains of a bug, and you respond with "It works
 on my machine", you lose.
 
 This is why automated testing is so important.
