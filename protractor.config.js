@@ -23,7 +23,8 @@ exports.config = {
     multiCapabilities: [{
         'browserName': 'chrome'
     }],
-    // Framework to use. Jasmine is recommended.
+
+  // Framework to use. Jasmine is recommended.
   framework: 'jasmine',
 
   // Spec patterns are relative to this config file
