@@ -27,7 +27,6 @@ before_script:
 script:
 - tsc
 - karma start karma.conf.js
-- node_modules/lite-server/bin/lite-server &
-- webdriver-manager start --seleniumPort 6666 &
-- export SELENIUM_URL=http://localhost:6666/wd/hub
+- node_modules/lite-server/bin/lite-server
+- webdriver-manager start --standalone
 - node_modules/protractor/bin/protractor protractor.config.js --kill-others --success first --no-sandbox
