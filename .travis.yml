@@ -24,9 +24,10 @@ before_script:
 - npm install
 
 script:
-- tsc&
+- tsc
 - karma start karma.conf.js
-- lite-server&
+- node_modules/lite-server/bin/lite-server &
 - webdriver-manager update
-- webdriver-manager start&
+- webdriver-manager start &
+- export SELENIUM_URL=http://localhost:3001
 - protractor protractor.config.js
