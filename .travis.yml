@@ -22,11 +22,11 @@ before_script:
 - npm install -g @angular/cli
 - npm install -g karma
 - npm install
+- tsc
 - webdriver-manager update
 
 script:
-- tsc
 - karma start karma.conf.js
 - node_modules/lite-server/bin/lite-server &
 - webdriver-manager start &
-- node_modules/protractor/bin/protractor protractor.config.js --seleniumAddress http://localhost:4444/wd/hub--success first --no-sandbox
+- node_modules/protractor/bin/protractor protractor.config.js --seleniumAddress http://localhost:4444/wd/hub --success first --no-sandbox
