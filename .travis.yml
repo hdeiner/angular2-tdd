@@ -26,3 +26,7 @@ before_script:
 script:
 - tsc&
 - karma start karma.conf.js
+- lite-server&
+- webdriver-manager update
+- webdriver-manager start&
+- protractor protractor.config.js
