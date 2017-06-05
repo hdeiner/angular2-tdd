@@ -27,7 +27,9 @@ before_script:
 - webdriver-manager update
 
 script:
+# unit tests
 - karma start karma.conf.js
+# e2e tests: start webserver, then selenium, then protractor
 - node_modules/lite-server/bin/lite-server &
 - sleep 10 # give lite-server some time to start uo
 - webdriver-manager start &
