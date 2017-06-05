@@ -23,8 +23,5 @@ before_script:
 - npm install -g karma
 - npm install
 
-install:
-- npm install
-
 script:
-- npm test
+- tsc && concurrently --kill-others "tsc -w" "karma start karma.conf.js"
