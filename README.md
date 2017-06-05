@@ -85,3 +85,29 @@ A custom reporter (see `protractor.config.js`) generates a  `./_test-output/prot
 which is easier to read; this file is excluded from source control.
 
 Shut it down manually with `Ctrl-C`.
+
+### Automated Testing
+
+This is where the rubber hits the road.  Writing new tests before new functionality
+and running those tests as part of a TDD pattern are all well and good.  But the
+first time that your customer compains of a bug, and you respond with "It works
+on my machine", you lose.
+
+This is why automated testing is so important.
+
+There is a serious problem with Angular2.  Because it's pretty new, many of the 
+tools we used for pure JavaSctipt testing no longer work in an Angular world.  
+What does work is the Chrome browser.  That's a bit of a shame, because the standard
+way of executing unit tests before, with PhantomJS remains a little out of reach as
+of the time that this project is being committed.  PhantomJS was great, because it worked
+without requiring a graphical user interface for the browser, and made lots of unit testing
+go really fast.
+
+There are also problems with getting FireFox and other browsers working with Protractor
+as of this date.  The code leaves open the door to simply adding more browsers to `protractor.config.js`,
+but that is left to the reader for now.
+
+This project has a `.travis.yml` file, and does in fact automate testing on 
+Travis CI at https://travis-ci.org/hdeiner/angular2-tdd.  If automated testing can be
+done on Travis CI, it can be done in any of the more local CI servers even easier.
+
