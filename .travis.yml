@@ -28,5 +28,5 @@ script:
 - tsc
 - karma start karma.conf.js
 - node_modules/lite-server/bin/lite-server &
-- webdriver-manager start --standalone --passthru &
-- node_modules/protractor/bin/protractor protractor.config.js --kill-others --success first --no-sandbox
+- webdriver-manager start &
+- node_modules/protractor/bin/protractor protractor.config.js --seleniumAddress http://localhost:4444/wd/hub--success first --no-sandbox
