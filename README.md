@@ -96,7 +96,7 @@ on my machine", you lose.
 This is why automated testing is so important.
 
 There is a serious problem with Angular2.  Because it's pretty new, many of the 
-tools we used for pure JavaSctipt testing no longer work in an Angular world.  
+tools we used for pure JavaScript testing no longer work in an Angular world.  
 What does work is the Chrome browser.  That's a bit of a shame, because the standard
 way of executing unit tests before, with PhantomJS remains a little out of reach as
 of the time that this project is being committed.  PhantomJS was great, because it worked
